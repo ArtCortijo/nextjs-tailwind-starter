@@ -8,61 +8,25 @@ import DynamicPlaiceholderBlur from '../components/dynamic/blur';
 import DynamicPlaiceholderColor from '../components/dynamic/color';
 import CustomOpacity from '../components/custom/opacity';
 import CustomSlide from '../components/custom/slide';
+import ImageList from '@/components/ImageList';
 
 export default function Home() {
 	return (
-		<main className='min-h-screen p-24'>
-			<section className={styles.section}>
-				<h1 className='text-3xl font-bold underline flex flex-col items-center justify-center'>
-					Static import
-				</h1>
+		// <main className='min-h-screen'>
+		// 	<section className='h-screen flex flex-col items-center justify-center bg-lime-300'>
+		// 		<h1 className='text-3xl font-bold underline'>Section 1</h1>
+		// 	</section>
 
-				<div className={styles.images}>
-					<DefaultBlur src={PictureOne} />
-				</div>
-			</section>
+		// 	<section className='h-screen flex flex-col items-center justify-center bg-red-200'>
+		// 		<h1 className='text-3xl font-bold underline'>Section 2</h1>
+		// 	</section>
 
-			<section className={styles.section}>
-				<h1 className='text-3xl font-bold underline flex flex-col items-center justify-center'>
-					Static import with Plaiceholder
-				</h1>
-
-				<div className={styles.images}>
-					<StaticPlaiceholderBlur src={'/images/img-1.webp'} />
-				</div>
-			</section>
-
-			<section className={styles.section}>
-				<h1 className='text-3xl font-bold underline flex flex-col items-center justify-center'>
-					Static import with Plaiceholder Color
-				</h1>
-
-				<div className={styles.images}>
-					<StaticPlaiceholderColor src={'/images/img-1.webp'} />
-				</div>
-			</section>
-
-			<section className={styles.section}>
-				<h1 className='text-3xl font-bold underline flex flex-col items-center justify-center'>
-					Dynamic import with Plaiceholder
-				</h1>
-
-				<div className={styles.images}>
-					<DynamicPlaiceholderBlur src='https://images.unsplash.com/photo-1621961458348-f013d219b50c?auto=format&fit=crop&w=1000&q=80' />
-					<DynamicPlaiceholderColor src='https://images.unsplash.com/photo-1621961458348-f013d219b50c?auto=format&fit=crop&w=1000&q=80' />
-				</div>
-			</section>
-
-			<section className={styles.section}>
-				<h1 className='text-3xl font-bold underline flex flex-col items-center justify-center'>
-					Custom in-view animations
-				</h1>
-
-				<div className={styles.images}>
-					<CustomOpacity src='https://images.unsplash.com/photo-1621961458348-f013d219b50c?auto=format&fit=crop&w=1000&q=80' />
-					<CustomSlide src='https://images.unsplash.com/photo-1621961458348-f013d219b50c?auto=format&fit=crop&w=1000&q=80' />
-				</div>
-			</section>
+		// 	<section className='h-screen flex flex-col items-center justify-center bg-orange-200'>
+		// 		<h1 className='text-3xl font-bold underline'>Section 3</h1>
+		// 	</section>
+		// </main>
+		<main className='p-16 xl:p-32 flex flex-col w-full items-center justify-center'>
+			<ImageList />
 		</main>
 	);
 }
